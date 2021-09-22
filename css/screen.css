@@ -2,6 +2,20 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face{
+    font-family: "Inter Web";
+    font-weight: 400;
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-display: auto;
+}
+
+@font-face{
+    font-family: "Inter Web";
+    font-weight: 500;
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+    font-display: auto;
+}
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -25,12 +39,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: 'Inter Web', sans-serif;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -46,14 +60,8 @@ html {
 * Customize the background color to match your design.
 */
 
-::-moz-selection {
-    background: HotPink;
-    color: white;
-    text-shadow: none;
-}
-
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,18 +166,22 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #3385FF;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #1957b4;
+}
+
+input{
+    display: block;
 }
 
 /*------------------------------------*\
@@ -432,17 +444,56 @@ a:focus {
     Website main logo
 */
 
+.c-logo{
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-logo__symbol{
+    height: 100%;
+}
+
+.c-logo__path--1{
+    fill:#20223A;
+}
+.c-logo__path--2{
+    fill:#3385FF;
+}
+.c-logo__path--3{
+    fill:#1B4186;
+}
+
 /*
     Component: Card
     ---
     Card with box shadow
 */
 
+.c-card{
+    background-color: #fff;
+}
+.c-card--head{
+   
+}
+.c-card--body{
+ 
+}
+.c-card--footer{
+
+}
+
 /*
     Component: Forms
     ---
     Everything form related here
 */
+
+.c-form-field--checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
 /*
     Component: Input
@@ -451,10 +502,31 @@ a:focus {
 */
 
 .c-input {
+    all: unset;
+
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e2e3e7;
+    background-color: #fff;
+    /* padding: 2px 4px; */
+    border-radius: 3px;
+    padding: 11px 15px;
+    font-family: inherit;
+    color: inherit;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    outline: none;
 
 }
 
+.c-input:hover {
+border-color: #CACCD4;
+}
 .c-input:focus {
+    box-shadow: 0 0 0 3px #4f95ff4d;
+    border-color: #3385ff;
 }
 
 /*
@@ -480,19 +552,29 @@ a:focus {
 */
 
 .c-button {
-
+width: 100%;
+display: block;
+background-color: #3385FF;
+border: 1px solid #2E77E6;
+height: 48px;
+color: #fff;
+border-radius: 3px;
+cursor: pointer;
+font-weight: 500;
 }
 
 .c-button:hover {
-
+background-color: #4F95FF;
 }
 
 .c-button:focus {
-
+background-color: #3385FF;
+outline: none;
+box-shadow: 0 0 0 3px #4f95ff4d;
 }
 
 .c-button:active {
-
+background-color: #2E77E6;
 }
 
 .c-button--block {
